@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8' />
+        <title> js testing </title>
+    </head>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:600px;
+
+        }
+        .demo{
+            font-size: 60px;
+            font-style: italic;
+            border-radius: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
+            color:white;
+            padding:20px;
+        }
+    </style>
+
+    <body>
+
+        <button class="demo">Login</button>
+        <p class="test"></p>
+
+        <script>
+            function login(){
+                let name = prompt("Please enter the admin username");
+                if(name == "Admin"){
+                    let pass = prompt("Please enter the admin password");
+                    if(pass == "TheMaster"){
+                        alert("You have now signed in, great work.");
+                    }
+                    else if(pass == null || pass == ""){}
+                    else{
+                        alert("Invalid Password")
+                        login();
+                    }
+                }
+                else if(name == null){}
+                else{
+                    alert("Not a valid admin ");
+                    login();
+                    };
+                
+            }
+
+            let testing = document.querySelector('button.demo');
+            testing.addEventListener('click', (login));
+
+        </script>
+
+
+    </body>
+
+
+</html>

@@ -84,5 +84,6 @@ a{
   row-gap: 10px;
   column-gap: 2em;
   padding:10px;
+  flex-grow: 1;
   
 }
